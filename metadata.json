@@ -1,0 +1,7 @@
+{
+  "name": "天目湖·造梦者计划 H5",
+  "description": "沉浸式小红书风格招募 H5，融合天目湖三色元素与孟菲斯设计风格。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
