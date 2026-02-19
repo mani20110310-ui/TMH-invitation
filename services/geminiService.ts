@@ -1,10 +1,8 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getInspirationTips = async () => {
   try {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: "为天目湖造梦者计划生成5个极具创意且符合小红书风格的'灵感锦囊'。例如：做一个水上书店？做一个悬崖秋千？文案要潮，要短。",
@@ -40,6 +38,7 @@ export const getInspirationTips = async () => {
  */
 export const generateCollageImage = async (prompt: string) => {
   try {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const finalPrompt = `A high-quality collage art of Tianmu Lake, ${prompt}. 
     Style: Mixed media collage with paper cut-outs, high-saturation photography segments, 
     and hand-drawn sketches. Colors: vibrant blue (#2D9CDB), lush green (#27AE60), and sun yellow (#F2C94C). 
